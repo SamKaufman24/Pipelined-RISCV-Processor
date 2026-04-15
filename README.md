@@ -1,10 +1,10 @@
 # Pipelined RISC-V Processor
  
-A 32-bit pipelined RISC-V processor implemented in Verilog, designed and verified as part of a computer architecture course at UW-Madison. Scored 220/200 — full marks plus 20 extra credit points for successful FPGA deployment.
+A 32-bit pipelined RISC-V processor implemented in Verilog, designed and verified as part of a computer architecture course at UW-Madison. Scored 220/200 — full marks plus 20 extra credit points for successful FPGA deployment on a Xilinx board.
  
 ## Architecture
  
-![Pipeline Architecture Diagram](block_diagram.png)
+![Pipeline Architecture Diagram](diagram.png)
  
 The processor implements the RV32I base integer instruction set using a classic 5-stage pipeline:
  
@@ -40,6 +40,8 @@ The processor implements the RV32I base integer instruction set using a classic 
 | `DMresult.v` | Data memory read result sign/zero extension |
 | `pc.v` | Program counter register |
 | `opcodeDecoder.v` | 1-hot instruction format encoder |
+| `forwarding.v` | Register forwarding logic for resolving RAW data hazards |
+| `add.v` | 32-bit adder used for PC increment and branch target calculation |
 | `mux2.v`, `mux4.v` | 2:1 and 4:1 multiplexers |
 | `dff_*.v` | Parameterized D flip-flop pipeline register primitives |
  
