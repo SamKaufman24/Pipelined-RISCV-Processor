@@ -1,10 +1,10 @@
 # Pipelined RISC-V Processor
  
-A 32-bit pipelined RISC-V processor implemented in Verilog, designed and verified as part of a computer architecture course at UW-Madison. Scored 220/200 — full marks plus 20 extra credit points for successful FPGA deployment on a Xilinx board.
+A 32-bit pipelined RISC-V processor implemented in Verilog, designed and verified as part of a computer architecture course at UW-Madison. Scored 220/200 — full marks plus 20 extra credit points for successful FPGA deployment.
  
 ## Architecture
  
-![Pipeline Architecture Diagram](diagram.png)
+![Pipeline Architecture Diagram](block_diagram.png)
  
 The processor implements the RV32I base integer instruction set using a classic 5-stage pipeline:
  
